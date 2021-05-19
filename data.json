@@ -1,0 +1,46 @@
+[
+  {
+    "type": "section",
+    "left_text": "Images",
+    "right_text": "17/03/2021",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Initial:",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Current:",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "image",
+        "key": "",
+        "value": "https://www.blabla.com/....",
+        "width": "300",
+        "height": "300"
+      },
+      {
+        "type": "image",
+        "key": "",
+        "value": "https://www.blabla.com/....",
+        "width": "300",
+        "height": "300"
+      },
+      {
+        "type": "key_value",
+        "key": "L x Z x D:",
+        "value": "6.3 :::::"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Area:",
+        "value": "3.8 cm"
+      },
+      {}
+    ]
+  }
+]

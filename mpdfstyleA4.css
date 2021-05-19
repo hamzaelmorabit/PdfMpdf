@@ -1,0 +1,56 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.graph .labels .x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels .y-labels {
+  text-anchor: end;
+}
+.title {
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  padding: 0.4em;
+  font-weight: bold;
+  font-size: 16px;
+}
+td {
+  font-family: Arial, Helvetica, serif;
+  font-size: 13px;
+}
+.graph {
+  height: 500px;
+  width: 800px;
+}
+h1.tit {
+  color: red;
+}
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+.tit {
+  /* background-color: #6813f1; */
+  font-weight: bold;
+  /* color: whitesmoke; */
+}
+.labels {
+  font-size: 13px;
+}
+#title {
+  background-color: red;
+}
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: red;
+}
+
+.data {
+  fill: red;
+  stroke-width: 1;
+}
