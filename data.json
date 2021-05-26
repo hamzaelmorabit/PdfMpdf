@@ -1,17 +1,60 @@
 [
   {
     "type": "section",
+    "left_text": "Patient Profile",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+      {
+        "type": "image",
+        "key": "image",
+        "value": "./images/woundInitial.png"
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": "0/M"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+  {
+    "type": "section",
     "left_text": "Images",
     "right_text": "17/03/2021",
     "columns": "2",
     "values": [
       {
-        "type": "key_value",
+        "type": "key_value1",
         "key": "Initial:",
         "value": "17/03/2021"
       },
       {
-        "type": "key_value",
+        "type": "key_v!",
         "key": "Current:",
         "value": "17/03/2021"
       },
