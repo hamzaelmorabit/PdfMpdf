@@ -1,26 +1,78 @@
-body {
-  font-family: "Open Sans", sans-serif;
+.gwt-Label {
+  float: left;
+  width: 50%;
+}
+* {
+  font-family: sans-serif;
+}
+.sectio {
+  /* page-break-inside: avoid; */
+  /* color: yellowgreen; */
+}
+.gwt-Label2 {
+  width: 100%;
+  padding: 0.4em;
+  font-weight: bold;
+  font-size: 13.3px;
+  font-family: sans-serif;
+
+  display: block;
+  background-color: rgb(240, 240, 240);
+}
+.divTableRow {
+  display: table-row;
+  border: 1px solid #fffb00;
+}
+.divTableCell {
+  border: 1px solid #5930f0;
+  display: table-cell;
+  /* padding: 3px 10px; */
+}
+.Table {
+  display: block;
+}
+.Row {
+  display: table-row;
+}
+.Cell {
+  display: table-cell;
+}
+.gwt-Label {
+  float: right;
+  /* width: 10%; */
 }
 
-.graph .labels .x-labels {
-  text-anchor: middle;
-}
-
-.graph .labels .y-labels {
-  text-anchor: end;
-}
 .title {
+  /* position: absolute; */
   background-color: rgb(240, 240, 240);
   width: 100%;
   padding: 0.4em;
   vertical-align: middle;
   font-weight: bold;
-  height: 0.1%;
-  font-size: 11px;
+  height: 0.07%;
+
+  font-size: 13.3px;
+  font-family: sans-serif;
 }
+.tcaption-left-part {
+  width: 50%;
+  float: left;
+  text-align: left;
+  /* page-break-after: avoid; */
+}
+
+.tcaption-right-part {
+  width: 50%;
+  /* page-break-after: avoid; */
+  float: right;
+  text-align: right;
+}
+
 td {
-  font-family: Arial, Helvetica, serif;
-  font-size: 11px;
+  font-family: sans-serif;
+  font-size: 18px;
+  /* color: red; */
+  page-break-inside: avoid;
 }
 .graph {
   height: 500px;

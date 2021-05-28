@@ -25,11 +25,54 @@
         "key": "Location",
         "value": ""
       },
+
       {
-        "type": "image",
-        "key": "image",
-        "value": "./images/woundInitial.png"
+        "type": "key_value",
+        "key": "Compte",
+        "value": "0/M"
       },
+      { "type": "key_value", "key": "Compte1", "value": "" },
+      {
+        "type": "key_value",
+        "key": "Compte1",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Compte12",
+        "value": "Hamza"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
       {
         "type": "key_value",
         "key": "Age/Sex",
@@ -42,48 +85,1181 @@
       }
     ]
   },
+
   {
     "type": "section",
-    "left_text": "Images",
-    "right_text": "17/03/2021",
+    "left_text": "Wound",
+    "right_text": "",
     "columns": "2",
     "values": [
       {
-        "type": "key_value1",
-        "key": "Initial:",
-        "value": "17/03/2021"
-      },
-      {
-        "type": "key_v!",
-        "key": "Current:",
-        "value": "17/03/2021"
-      },
-      {
-        "type": "image",
-        "key": "",
-        "value": "https://www.blabla.com/....",
-        "width": "300",
-        "height": "300"
-      },
-      {
-        "type": "image",
-        "key": "",
-        "value": "https://www.blabla.com/....",
-        "width": "300",
-        "height": "300"
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
       },
       {
         "type": "key_value",
-        "key": "L x Z x D:",
-        "value": "6.3 :::::"
+        "key": "MRN",
+        "value": "1"
       },
-      {},
       {
         "type": "key_value",
-        "key": "Area:",
-        "value": "3.8 cm"
+        "key": "DOB",
+        "value": "17/03/2021"
       },
-      {}
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": "0/M"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": "0/M"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "AA",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": "0/M"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound3",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": "0/M"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": "Consult clinical staff"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "22",
+        "key": "Name",
+        "value": "./images/22woundFinal.png"
+      },
+      {
+        "type": "im22age",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      },
+      {
+        "type": "image",
+        "key": "Name",
+        "value": "./images/woundFinal.png"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "Initial",
+        "key": "Name",
+        "value": "dfdfd"
+      },
+      {
+        "type": "Current",
+        "key": "Name",
+        "value": "dfdf.png"
+      },
+
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Barden score",
+        "value": ""
+      }
     ]
   }
 ]
