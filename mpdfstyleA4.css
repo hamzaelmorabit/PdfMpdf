@@ -2,6 +2,10 @@
   float: left;
   width: 50%;
 }
+.gwt-Label22 {
+  float: left;
+  width: 100%;
+}
 * {
   font-family: sans-serif;
 }
@@ -11,7 +15,7 @@
 }
 .gwt-Label2 {
   width: 100%;
-  padding: 0.4em;
+  padding: 0.1em;
   font-weight: bold;
   font-size: 13.3px;
   font-family: sans-serif;
@@ -46,7 +50,7 @@
   /* position: absolute; */
   background-color: rgb(240, 240, 240);
   width: 100%;
-  padding: 0.4em;
+  padding: 0.1em;
   vertical-align: middle;
   font-weight: bold;
   height: 0.07%;
@@ -108,3 +112,92 @@ h1.tit {
   fill: red;
   stroke-width: 1;
 }
+
+/* 
+
+ {
+        "type": "key_value",
+        "key": "Wound edge",
+        "value": "Rolled, Epithelialized"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Peri-wound",
+        "value": "Erythema, Ecchymosis, Indurated"
+      },
+      {},
+
+      {
+        "type": "key_value",
+        "key": "Pain",
+        "value": "4 - With-movement"
+      },
+      {},
+
+      {
+        "type": "key_value",
+        "key": "Drainage",
+        "value": "Minimum: Sanguineous"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Odor",
+        "value": "Malodorous"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Infection",
+        "value": "YES"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Clinical",
+        "value": "DP L:Biphasic, PT L:Biphasic, AB L:2, DP R:Biphasic, PT R:1+, AB R:3, BG:23"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Tunneling",
+        "value": "Direction 5,2 - 23 cm"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Undermining",
+        "value": "Direction 5,2 - 23 cm"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Stage",
+        "value": "N/A"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Non-removable",
+        "value": "No"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "device/dressing",
+        "value": "Regular"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Push Score",
+        "value": "Regular"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Notes",
+        "value": "Account admin 07/05/2021 11:35 AM: Testy noyrd"
+      }
+  */

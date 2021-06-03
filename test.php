@@ -16,95 +16,95 @@ require __DIR__ . '/vendor/autoload.php';
 $string = file_get_contents("./data.json");
 $json = json_decode($string, true);
 $aaa = array(0 => 100);
- $array = array(0 => 100, "color" => $aaa);
+$array = array(0 => 100, "color" => $aaa);
 print_r(($array["color"][0]));
-  // Convert JSON string to Object
-  $someObject  = json_decode(json_encode($json),true);
+// Convert JSON string to Object
+$someObject  = json_decode(json_encode($json), true);
 
-  echo "<pre>";
-  print_r($someObject[0]["type"]);     
-  // echo "<pre>";
-  $item = array($someObject[1]["values"][1]) ;// Dump all data of the Object
-  // echo "<pre>";
-  // print_r(gettype($item));      // Dump all data of the Object
-   print_r(($item[0]));  
+echo "<pre>";
+print_r($someObject[0]["type"]);
+// echo "<pre>";
+$item = array($someObject[1]["values"][1]); // Dump all data of the Object
+// echo "<pre>";
+// print_r(gettype($item));      // Dump all data of the Object
+print_r(($item[0]));
 
-   function tableSection($someObject,$column1){
-     $i = $column1;
-        $title = $someObject[0]["type"];
-     
-       $seTableStr = '<table width="100%"       ><tbody>';
+function tableSection($someObject, $column1)
+{
+  $i = $column1;
+  $title = $someObject[0]["type"];
 
-    foreach ($someObject[0]["values"] as $key=>$val){
-        $seTableStr .= '<tr>';
-         if(isset($val["type"]) && $i % 2 != 0 ) {
-           $seTableStr .= '<td style="font-weight:bold;padding-top:2%">'.$val["key"].'<td>';
+  $seTableStr = '<table width="100%"       ><tbody>';
 
-           if($val["type"] != 'image')
-               $seTableStr .= '<td style="padding-left:43%;font-weight:bold;">' .$val["value"] . '</td>';        
-           else  
-              $seTableStr .= '<td style="padding-left:43%"><img src="'.$val['value'].'" width="32%" /></td>';
+  foreach ($someObject[0]["values"] as $key => $val) {
+    $seTableStr .= '<tr>';
+    if (isset($val["type"]) && $i % 2 != 0) {
+      $seTableStr .= '<td style="font-weight:bold;padding-top:2%">' . $val["key"] . '<td>';
 
-        }
-        $i++;
-     $seTableStr .= '</tr>';
-    
+      if ($val["type"] != 'image')
+        $seTableStr .= '<td style="padding-left:43%;font-weight:bold;">' . $val["value"] . '</td>';
+      else
+        $seTableStr .= '<td style="padding-left:43%"><img src="' . $val['value'] . '" width="32%" /></td>';
+    }
+    $i++;
+    $seTableStr .= '</tr>';
   }
 
-    $seTableStr .= '</tbody></table>';
-    
-return [$seTableStr,$title];
+  $seTableStr .= '</tbody></table>';
+
+  return [$seTableStr, $title];
 }
-    
- function section($headerType,$column1,$column2){
-          $titleStyle="title";
-          if($headerType!=''){
-           $section =  '<div class='.$titleStyle.'>'.$headerType.'</div>';
-          }
-          $section .=  '
+
+function section($headerType, $column1, $column2)
+{
+  $titleStyle = "title";
+  if ($headerType != '') {
+    $section =  '<div class=' . $titleStyle . '>' . $headerType . '</div>';
+  }
+  $section .=  '
             <table width="100%"
             style="border-bottom: 0px solid #000000; 
             vertical-align: top; 
             font-family: serif; font-size: 11px;">
             <tr>
-            <td width="33%;">'.$column1.'</td>
+            <td width="33%;">' . $column1 . '</td>
 
             <td width="10% ;color:red"></td>  
-            <td width="33%;">'.$column2.'</td>
+            <td width="33%;">' . $column2 . '</td>
             </tr></table>';
 
-          return $section;
+  return $section;
 }
-$section = section(tableSection($someObject,1)[1],tableSection($someObject,1)[0],tableSection($someObject,0)[0]);
+$section = section(tableSection($someObject, 1)[1], tableSection($someObject, 1)[0], tableSection($someObject, 0)[0]);
 
- $x = 0;
-    $i =0;
-    $y = 0;
-  echo $section ;
+$x = 0;
+$i = 0;
+$y = 0;
+echo $section;
 
 //     while (isset($patient_profile[$y][$x])) {
 //   echo "ff";
-      
+
 //         while (isset($patient_profile[$y][$x]) ) {
 //   echo "<pre>";
 
 // echo($patient_profile[$y][$x]);  
 //   echo "</pre>";
-          
+
 //                   $x++;
 //               }
-              
+
 //                 $x = 0;
 //                 $i++;
 //                 $y++;
 
-    // }
+// }
 // 
-        // Dump all data of the Object
-  // print_r(($item[1]));      // Dump all data of the Object
-  echo "<pre>";
-  print_r(sizeof ($someObject)); //      // Dump all data of the Object
-  echo "<pre>";
+// Dump all data of the Object
+// print_r(($item[1]));      // Dump all data of the Object
+echo "<pre>";
+print_r(sizeof($someObject)); //      // Dump all data of the Object
+echo "<pre>";
 //   echo $someObject[0]->first_name;
 
 // $array = json_decode($json, true);
@@ -171,10 +171,10 @@ Attribute('name');
 
 } */
 
-  require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-  $mpdf = new \Mpdf\Mpdf();
- $mpdf->WriteHTML('<p>dHllo</p>');
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->WriteHTML('<p>dHllo</p>');
 
 //  $mpdf->Output(); 
 
@@ -182,117 +182,100 @@ Attribute('name');
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Generating PDF from HTML fORM using MPDF Library</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css" />
+  <title>Generating PDF from HTML fORM using MPDF Library</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="jsChart.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- 
 <script src="jsChart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
 
 <body>
-<div class="container mt-5">
+  <div class="container mt-5">
     <div id="test">ss</div>
     <button onclick="test()">Click</button>
     <div id="chart" name="report"></div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script>
-var options = {
-    image: {
-      src: [],
-      width: 300,
-      height: 400
-  },
-  chart: {
-    type: "line",
-  },
-  series: [
-    {
-      name: "sales",
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
-    },
-  ],
-  xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-  },
-};
+    <script>
+      var options = {
+        image: {
+          src: [],
+          width: 300,
+          height: 400
+        },
+        chart: {
+          type: "line",
+        },
+        series: [{
+          name: "sales",
+          data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+        }, ],
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+        },
+      };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+    </script>
 
-</script>
-
-<?php $shop = array(
-    array("rose",   1.25),
-    array("daisy",  0.75),
-    array("orchid", 1.15 ),
-);
-   foreach ($shop as $row) :
-    echo $row[1];
-   endforeach;
-?>
+    <?php $shop = array(
+      array("rose",   1.25),
+      array("daisy",  0.75),
+      array("orchid", 1.15),
+    );
+    foreach ($shop as $row) :
+      echo $row[1];
+    endforeach;
+    ?>
 
 
-   <?php if (count($shop) > 0): ?>
-<table style="float:right;margin-right:13%">
-  <thead>
-    <tr>
-    </tr>
-  </thead>
-  <tbody>
-<?php foreach ($shop as $row): 
-  // array_map('htmlentities', $row);
-   ?>
-    <tr>
-      <td style="font-weight: bold"><?php echo implode('</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', $row); ?></td>
-    </tr>
-<?php endforeach; ?>
-  </tbody>
-</table>
-<?php endif; ?>
+    <?php if (count($shop) > 0) : ?>
+      <table style="float:right;margin-right:13%">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($shop as $row) :
+            // array_map('htmlentities', $row);
+          ?>
+            <tr>
+              <td style="font-weight: bold"><?php echo implode('</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', $row); ?></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    <?php endif; ?>
 
- <?php if (count($shop) > 0): ?>
-<table style="margin-right:13%">
-  <thead>
-    <tr>
-    </tr>
-  </thead>
-  <tbody>
-<?php foreach ($shop as $row): 
-  // array_map('htmlentities', $row);
-   ?>
-    <tr>
-      <td><?php echo implode('</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', $row); ?></td>
-    </tr>
-<?php endforeach; ?>
-  </tbody>
-</table>
-<?php endif; ?>
+    <?php if (count($shop) > 0) : ?>
+      <table style="margin-right:13%">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($shop as $row) :
+            // array_map('htmlentities', $row);
+          ?>
+            <tr>
+              <td><?php echo implode('</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', $row); ?></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    <?php endif; ?>
 
-    <!-- <h1>Send PDF as Attachement</h1>
 
-    <p>Fill out the Details to generate the pdf</p>
-
-    <form action="test.php" method="post">
-    
-        <input type="text" placeholder="First Name" name="fname" class="form-control" required>
-        <input type="text" placeholder="Last Name" name="lname" class="form-control" required>
-        <input type="email" placeholder="Email" name="email" class="form-control" required>
-
-        <textarea name="message" placeholder="Message" class="form-control" required>
-
-        </textarea>
-
-        <button class="btn btn-success" type="submit">Send</button>
-
-    </form> -->
-<img src="graph.php"/>
-</div>
+    <img src="graph.php" />
+  </div>
 
 </body>
+
 </html>
