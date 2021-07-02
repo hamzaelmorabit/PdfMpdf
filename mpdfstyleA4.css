@@ -1,26 +1,93 @@
+.headerTable {
+  border-bottom: 1px solid #000000;
+  vertical-align: top;
+  font-family: serif;
+  font-size: 3pt;
+}
+@media print {
+    div,tr {
+      break-inside: avoid;
+    }
+}
+
 .gwt-Label {
   float: left;
   width: 50%;
 }
 .gwt-Label22 {
   float: left;
+
   width: 100%;
 }
 * {
   font-family: sans-serif;
 }
-.sectio {
-  /* page-break-inside: avoid; */
-  /* color: yellowgreen; */
+.left_text {
+  margin-right: 222%;
+  float: left;
+}
+.right_text {
+  padding-left: 70%;
+}
+.section1 {
+  display: block;
+
+  /* position: relative; */
+   break-inside: avoid;
+  /* display: inline; */
+  height:fit-content;
+  box-sizing: content-box;
+  width: 100%;
+  /* margin: 10 auto; */
+  /* page-break-after: top; */
+  /* background-color: yellowgreen; */
+  /* white-space:nowrap; */
+  /* page-break-after:avoid; */
+}
+
+/* .hg-pdf table tr div {
+  page-break-inside: avoid;
+} */
+
+div { display: block; } /* this is key */
+
+    div, p {break-inside: avoid; }
+div {
+        display: block;
+    }
+    div, table, ul, ol {
+
+       break-inside: avoid;
+
+    }
+div {
+
+     break-inside: avoid;
 }
 .gwt-Label2 {
+  display: block;
+  /* page-break-after:avoid; */
   width: 100%;
-  padding: 0.1em;
+  position: absolute;
+  /* overflow: auto; */
+  /* white-space:nowrap;   */
+  /* page-break-inside: avoid; */
+   break-inside: avoid;
+  padding: 0.5em;
+  /* position: absolute; */
+  /* display: inline; */
+  /* padding-bottom:  25em; */
+  /* page-break-inside: avoid; */
+  page-break-inside: auto !important;
+
   font-weight: bold;
   font-size: 13.3px;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
   font-family: sans-serif;
 
-  display: block;
+  /* display: block; */
   background-color: rgb(240, 240, 240);
 }
 .divTableRow {
@@ -112,92 +179,77 @@ h1.tit {
   fill: red;
   stroke-width: 1;
 }
+/*
 
-/* 
-
- {
-        "type": "key_value",
-        "key": "Wound edge",
-        "value": "Rolled, Epithelialized"
-      },
-      {},
+  {
+    "type": "images",
+    "left_text": "Images",
+    "right_text": "17/03/2021 04:41 PM",
+    "columns": "3",
+    "values": [
       {
-        "type": "key_value",
-        "key": "Peri-wound",
-        "value": "Erythema, Ecchymosis, Indurated"
+        "type": "image",
+        "key": "22/12/2020",
+        "value": "./images/woundFinal.png"
       },
-      {},
 
       {
-        "type": "key_value",
-        "key": "Pain",
-        "value": "4 - With-movement"
+        "type": "image",
+        "key": "",
+        "value": "./images/woundInitial.png"
       },
-      {},
+      {
+        "type": "image",
+        "key": "22/12/2020",
+        "value": "./images/woundFinal.png"
+      },
 
       {
-        "type": "key_value",
-        "key": "Drainage",
-        "value": "Minimum: Sanguineous"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 04:40 PM"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "Odor",
-        "value": "Malodorous"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 04:42 PM"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "Infection",
-        "value": "YES"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 05:41 PM"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "Clinical",
-        "value": "DP L:Biphasic, PT L:Biphasic, AB L:2, DP R:Biphasic, PT R:1+, AB R:3, BG:23"
+        "type": "image",
+        "key": "22/12/2020",
+        "value": "./images/woundFinal.png"
       },
-      {},
+
       {
-        "type": "key_value",
-        "key": "Tunneling",
-        "value": "Direction 5,2 - 23 cm"
+        "type": "image",
+        "key": "",
+        "value": "./images/woundInitial.png"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "Undermining",
-        "value": "Direction 5,2 - 23 cm"
+        "type": "image",
+        "key": "22/12/2020",
+        "value": "./images/woundFinal.png"
       },
-      {},
+
       {
-        "type": "key_value",
-        "key": "Stage",
-        "value": "N/A"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 04:40 PM"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "Non-removable",
-        "value": "No"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 04:42 PM"
       },
-      {},
       {
-        "type": "key_value",
-        "key": "device/dressing",
-        "value": "Regular"
-      },
-      {},
-      {
-        "type": "key_value",
-        "key": "Push Score",
-        "value": "Regular"
-      },
-      {},
-      {
-        "type": "key_value",
-        "key": "Notes",
-        "value": "Account admin 07/05/2021 11:35 AM: Testy noyrd"
+        "type": "z",
+        "key": "22/12/2020",
+        "value": "7/03/2021 05:41 PM"
       }
-  */
+    ]
+  }, */

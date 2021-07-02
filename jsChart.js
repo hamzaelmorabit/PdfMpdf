@@ -1,3 +1,8 @@
+/* 
+<!-- <?php header('Access-Control-Allow-Origin: *'); ?>
+<?php echo $string = '{
+  "name":"hamza",
+  "age":"33,}'; ?> --> */
 var options = {
   chart: {
     type: "bar",
@@ -57,9 +62,6 @@ chart.render();
 //   });
 // });
 
-
-
-
 /* 
 <!-- <?php // content="text/plain; charset=utf-8"
 require_once('src/jpgraph.php');
@@ -106,3 +108,233 @@ $graph->Stroke();
 
 ?> -->
  */
+
+/* 
+
+  {
+    "type": "section",
+    "left_text": "Patient Profile",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Name",
+        "value": "Image Test"
+      },
+      {
+        "type": "key_value",
+        "key": "MRN",
+        "value": "1"
+      },
+      {
+        "type": "key_value",
+        "key": "DOB",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Compte",
+        "value": "0/M"
+      },
+      { "type": "key_value", "key": "Compte1", "value": "" },
+      {
+        "type": "key_value",
+        "key": "Compte1",
+        "value": ""
+      },
+
+      {
+        "type": "key_value",
+        "key": "Compte12",
+        "value": "Hamza"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Wound",
+        "value": "Wound test"
+      }
+    ]
+  },
+
+  {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Etiology",
+        "value": "Diabetic"
+      },
+      {
+        "type": "key_value",
+        "key": "Onset Date",
+        "value": "17/03/2021"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": "Elbow, Right"
+      },
+      {
+        "type": "key_value",
+        "key": "Assessment",
+        "value": "07/05/2021 11:35"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Status",
+        "value": "Active"
+      },
+      {
+        "type": "key_value",
+        "key": "Clinician",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Facility acquired",
+        "value": "No"
+      }
+    ]
+  },
+
+  {
+    "type": "images",
+    "left_text": "Images",
+    "right_text": "17/03/2021 04:41 PM",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Initial",
+        "value": "17/03/2021 04:38 PM"
+      },
+      {
+        "type": "key_value",
+        "key": "Current",
+        "value": "17/03/2021 04:41 PM"
+      },
+
+      {
+        "type": "image",
+        "key": "",
+        "value": "./images/woundFinal.png"
+      },
+
+      {
+        "type": "image",
+        "key": "",
+        "value": "./images/woundInitial.png"
+      },
+      {
+        "type": "key_value",
+        "key": "L x W x D",
+        "value": "6.3 x 7.8 x 1.4 cm³"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Area",
+        "value": "35.8 cm²"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Volume",
+        "value": "50 cm³"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Type",
+        "value": "Regular"
+      }
+    ]
+  },
+  
+  
+   {
+    "type": "graph",
+    "left_text": "Images",
+    "right_text": "17/03/2021 04:41 PM",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Max depth",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Area",
+        "value": ""
+      },
+
+      {
+        "type": "graph",
+        "key": "",
+        "val1": 1.4,
+        "val2": 1.5,
+        "val3": 1.3,
+        "val4": 1.4,
+        "valMax": 2,
+        "colorTop": "247377",
+        "color": "56a1b7"
+      },
+      {
+        "type": "graph",
+        "key": "",
+        "val1": 35.8,
+        "val2": 36.5,
+        "val3": 37.1,
+        "val4": 36,
+        "valMax": 40,
+        "color": "ffc850",
+        "colorTop": "fad000"
+      },
+      {
+        "type": "key_value",
+        "key": "Volume",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Tissue",
+        "value": ""
+      },
+      {
+        "type": "graph",
+        "key": "",
+        "val1": 50,
+        "val2": 31.7,
+        "val3": 48.3,
+        "val4": 36,
+        "valMax": 60,
+        "color": "B3D4FC",
+        "colorTop": "2487ff"
+      },
+
+      {
+        "type": "graph_area",
+        "key": "",
+
+        "granulation": 77,
+        "slough": 16,
+        "eschar": 7,
+        "colorTop": "247377",
+        "color": "6495ED"
+      }
+    ]
+  }
+  */

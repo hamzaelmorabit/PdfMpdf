@@ -1,0 +1,255 @@
+{
+  "first_name": "Test",
+  "last_name": "Image",
+  "dob": "2021-03-12",
+  "gender": "M",
+  "mrn": "1",
+  "location_pat": " -",
+  "wounds": [
+    {
+      "onset": "2021-03-17",
+      "type": "Diabetic",
+      "is_active": "1",
+      "status": "active",
+      "primary_location": "33",
+      "secondary_location": null,
+      "position": "3",
+
+      "facility_acquired": null,
+      "is_worsened": "0",
+
+      "measurements": [
+        {
+          "maximum_depth": 1.4,
+          "maximum_length": "6.3",
+          "maximum_width": "7.8",
+          "area": 35.8,
+          "volume": 50,
+          "structure": "regular",
+          "last_update_date": "2021-03-17 16:39:31"
+        },
+        {
+          "area": 36.5,
+          "maximum_depth": 1.5,
+          "volume": 31.7,
+          "depth": 2,
+          "last_update_date": "2021-03-17 12:41:52",
+          "structure": "regular"
+        },
+        {
+          "maximum_depth": 1.3,
+          "maximum_length": "6.3",
+          "maximum_width": "7.8",
+          "area": 37.1,
+          "volume": 48.3,
+          "depth": 4,
+          "last_update_date": "2021-03-17 13:41:52",
+          "structure": "multiple"
+        },
+        {
+          "area": 36,
+          "volume": 36,
+          "maximum_depth": 1.4,
+          "depth": 2,
+          "last_update_date": "2021-03-17 16:41:52",
+          "structure": "regular"
+        }
+      ],
+
+      "assessments": [
+        {
+          "id_assessment": "1612",
+          "date": "2021-05-07 11:35:04",
+          "generator_role": "account_admin",
+          "is_deleted": "0",
+          "guid": null,
+          "Wound_id_wound": "2994",
+          "created_at": "2021-05-07 11:35:03",
+          "assessment_value": [
+            {
+              "id_assessment_values": "24834",
+              "sub_group": "WOUND_EDGE",
+              "item": "ROLLED",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24835",
+              "sub_group": "WOUND_EDGE",
+              "item": "EPITHELIALIZED",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24836",
+              "sub_group": "PERI_WOUND_SKIN",
+              "item": "ERYTHEMA",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24837",
+              "sub_group": "PERI_WOUND_SKIN",
+              "item": "ECCHYMOSIS",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24838",
+              "sub_group": "PERI_WOUND_SKIN",
+              "item": "INDURATED",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24839",
+              "sub_group": "PAIN",
+              "item": "WITH_MOVEMENT",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24840",
+              "sub_group": "PAIN",
+              "item": "SCALE",
+              "value": "4",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24841",
+              "sub_group": "DRAINAGE",
+              "item": "AMOUNT",
+              "value": "MINIMUM",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24842",
+              "sub_group": "DRAINAGE",
+              "item": "SANGUINEOUS",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24843",
+              "sub_group": "ODOR",
+              "item": "MALODOROUS",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24861",
+              "sub_group": "INFECTION",
+              "item": "INFECTED",
+              "value": "YES",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24844",
+              "sub_group": "CLINICAL",
+              "item": "DORSALIS_PEDIS_LEFT",
+              "value": "Biphasic",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24845",
+              "sub_group": "CLINICAL",
+              "item": "POSTERIOR_TIBIAL_LEFT",
+              "value": "Biphasic",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24846",
+              "sub_group": "CLINICAL",
+              "item": "ABI_LEFT",
+              "value": "2",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24847",
+              "sub_group": "CLINICAL",
+              "item": "DORSALIS_PEDIS_RIGHT",
+              "value": "Biphasic",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24848",
+              "sub_group": "CLINICAL",
+              "item": "POSTERIOR_TIBIAL_RIGHT",
+              "value": "1+",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24849",
+              "sub_group": "CLINICAL",
+              "item": "ABI_RIGHT",
+              "value": "3",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24850",
+              "sub_group": "CLINICAL",
+              "item": "BLOOD_GLUCOSE_LEVEL",
+              "value": "23",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24851",
+              "sub_group": "TUNNELING_UNDERMINING",
+              "item": "TUNNELING_LENGTH",
+              "value": "23",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24852",
+              "sub_group": "TUNNELING_UNDERMINING",
+              "item": "TUNNELING_DIRECTION",
+              "value": "2",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24853",
+              "sub_group": "TUNNELING_UNDERMINING",
+              "item": "UNDERMINING_LENGTH",
+              "value": "21",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "id_assessment_values": "24854",
+              "sub_group": "TUNNELING_UNDERMINING",
+              "item": "UNDERMINING_DIRECTION",
+              "value": "5,6",
+              "Assessment_idAssessment": "1612"
+            },
+            {
+              "_assessment_values": "24856",
+              "sub_group": "NOTES",
+              "item": "TEXT",
+              "value": "Testy noyrd",
+              "Assessment_idAssessment": "1612"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "onset": "01/01/2021",
+      "primary_type": "Ulcer",
+      "secondary_type": "Stage I",
+      "primary_location": 2,
+      "secondary_location": 4,
+      "measurements": [
+        {
+          "area": 10,
+          "volume": 12,
+          "depth": 4
+        },
+        {
+          "area": 11,
+          "volume": 4,
+          "depth": 2
+        }
+      ]
+    }
+  ]
+}
