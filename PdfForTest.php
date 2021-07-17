@@ -161,22 +161,27 @@ function templateTableTwoColumn($myTableArrayBody, $style)
 
 function templateTableOneColumn(&$myTableArrayBody, $style)
 {
-  $seTableStr = '<table  style=' . $style . '><tbody>';
-  foreach ($myTableArrayBody["values"] as  $val) {
-    if (isset($val["type"])) {
-      $seTableStr .= '<tr style="width:100%;">';
-      $seTableStr .= '<td style="font-size:  10.5px;font-weight:bold;"> 
+  if (isset($myTableArrayBody["values"])) {
+    $seTableStr = '<table  style=' . $style . '><tbody>';
+    foreach ($myTableArrayBody["values"] as  $val) {
+      if (isset($val["type"])) {
+        $seTableStr .= '<tr style="width:100%;">';
+        $seTableStr .= '<td style="font-size:  10.5px;font-weight:bold;"> 
                         ' . $val['key'] . '
                    
                     </td>
           <td style="font-size:  10.5px;padding-left:8%;" >
-           ' . $val['value'] . '</td>';
-      $seTableStr .= '</tr>';
+           ' .  $val['value'] . '</td>';
+        $seTableStr .= '</tr>';
+      }
     }
+    $seTableStr .= '</tbody></table>';
+  } else {
+    $seTableStr = $seTableStr = '<table  style=' . $style . '><tbody>
+    <tr style="width:100%;">';
+    $seTableStr .= '<td style="background-color:#ffcccb;font-size:  12px;width:98%;height:18%"><i>Please consult clinical staff for details</i></td><td></td></tr>';
+    $seTableStr .= '</tbody></table>';
   }
-  $seTableStr .= '</tbody></table>';
-
-
   return $seTableStr;
 }
 
@@ -228,6 +233,8 @@ function section($left_text, $right_text, $nbrColumns, $column1, $column2)
 
   
                   <div style="display: inline; ">';
+  if ($left_text == 'graph_measurement')
+    $section1 = '';
   if ($nbrColumns == 2)
     $section1  .= ' <div class=' . $styleColumn . ' >' . $column2 . '</div>
                    <div class=' . $styleColumn . ' >' . $column1 . '</div>';
@@ -247,7 +254,10 @@ for ($i = 2; $i < sizeof($someObject); $i++) {
   else
     $html1 = templateTableOneColumn($someObject[$i], 'margin-top:0.5%;margin-bottom:1%;');
 
-  if ($someObject[$i]["type"] == 'graph')  $section = '<pagebreak>';
+  if (
+    $someObject[$i]["type"] == 'graph' ||
+    $someObject[$i]["type"] == 'images_appendix'
+  )  $section = '<pagebreak>';
   else $section = '<div></div>';
 
   $section .= section($someObject[$i]["left_text"], $someObject[$i]["right_text"], $someObject[$i]["columns"], $html1, $html2);
@@ -268,7 +278,7 @@ $html = '
 // $mpdf->WriteHTML($graphLink);
 $mpdf->WriteHTML($html);
 
-$mpdf->Output();
+$mpdf->Output('pdfInSight.pdf');
 exit;
 
   //  {
@@ -282,4 +292,3 @@ exit;
   //       "color": "ffc850",
   //       "colorTop": "fad000"
   //     },
-

@@ -60,9 +60,43 @@ $someObject  = json_decode(json_encode($json), true);
 
 function getMultiple($tableMeasurement)
 {
+  $arryaCurrentWound  = array(
+    'granulation' =>
+    0,
+    'slough' =>
+    0,
+    'eschar' =>
+    0,
+    'volume' => 0,
+    "maximum_depth" => 1.3,
+    "avg_depth" => "",
+
+    'area' => 0,
+    "maximum_length" => "",
+    "maximum_width" => "",
+    "structure" => "",
+
+  );
   $arryaMaximum_depth = '[';
   $arryaVolume = '[';
   $arryArea = '[';
+  for ($i = sizeof($tableMeasurement) - 1; $i >= 0; $i--) {
+    if (isset($tableMeasurement[$i]["quality_index"])) {
+      $arryaCurrentWound["granulation"] = $tableMeasurement[$i]["granulation"];
+      $arryaCurrentWound["slough"] = $tableMeasurement[$i]["slough"];
+      $arryaCurrentWound["eschar"] = $tableMeasurement[$i]["eschar"];
+      $arryaCurrentWound["maximum_length"] = $tableMeasurement[$i]["maximum_length"];
+      $arryaCurrentWound["maximum_width"] = $tableMeasurement[$i]["maximum_width"];
+      $arryaCurrentWound["maximum_depth"]
+        = $tableMeasurement[$i]["maximum_depth"];
+      $arryaCurrentWound["avg_depth"]
+        = $tableMeasurement[$i]["avg_depth"];
+      $arryaCurrentWound["area"] = $tableMeasurement[$i]["area"];
+      $arryaCurrentWound["volume"] = $tableMeasurement[$i]["volume"];
+      $arryaCurrentWound["structure"] = $tableMeasurement[$i]["structure"];
+      break;
+    }
+  }
   for ($i = 0; $i < sizeof($tableMeasurement); $i++) {
     // if ($tableMeasurement[$i]["maximum_depth"] == "multiple") {
     if (isset($tableMeasurement[$i]["maximum_depth"]))
@@ -71,7 +105,11 @@ function getMultiple($tableMeasurement)
       $arryaVolume .= $tableMeasurement[$i]["volume"] . ',';
     if (isset($tableMeasurement[$i]["area"]))
       $arryArea .= $tableMeasurement[$i]["area"] . ',';
-
+    // if ($tableMeasurement[$i]["structure"] == "multiple") {
+    //   $arryaCurrentWound["granulation"] = $tableMeasurement[$i]["granulation"];
+    //   $arryaCurrentWound["slough"] = $tableMeasurement[$i]["slough"];
+    //   $arryaCurrentWound["eschar"] = $tableMeasurement[$i]["eschar"];
+    // }
     // }
   }
   $arryaMaximum_depth = substr($arryaMaximum_depth, 0, strlen($arryaMaximum_depth) - 1);
@@ -88,19 +126,13 @@ function getMultiple($tableMeasurement)
     $arryaVolume,
     'area' =>
     $arryArea,
-
+    'classifyMultiple' => $arryaCurrentWound,
   );
   return
     $arryaMeasure;
-  // for ($i = 0; $i < sizeof($tableMeasurement); $i++) {
-  //   if ($tableMeasurement[$i]["structure"] == "multiple") {
-  //     return $tableMeasurement[$i];
-  //   }
-  // }
-  // return "false";
 }
 $multipleWound = getMultiple($someObject["wounds"][0]["measurements"]);
-echo ($multipleWound["maximum_depth"]);
+echo ($multipleWound["classifyMultiple"]["avg_depth"]);
 
 
 
@@ -210,26 +242,6 @@ function convertFormatA()
   $json = json_decode($string, true);
 
   $someObject  = json_decode(json_encode($json), true);
-
-  if ($someObject["wounds"][0]["facility_acquired"] == null) $facility_acquired = "No";
-  else $facility_acquired = "Yes";
-
-  $lastMeasurement = $someObject["wounds"][0]["measurements"][sizeof($someObject["wounds"][0]["measurements"]) - 1];
-  $firstMeasurement = $someObject["wounds"][0]["measurements"][0];
-
-  $multipleWound = getMultiple($someObject["wounds"][0]["measurements"]);
-
-  //graph measurements
-  $arryaMeasure  = getMultiple($someObject["wounds"][0]["measurements"]);
-
-
-  $assessments = ($someObject["wounds"][0]["assessments"][0]);
-  $assessments_ = getAssementsValue($someObject["wounds"][0]["assessments"][0]["assessment_value"]);
-  $date = handleDateWithTime($assessments["created_at"]);
-  $generator_role = ucfirst(str_replace("_", "-", strtolower($assessments["generator_role"])));
-  $NoteAssessments = $generator_role . ' ' . $date  . ':<br/>' . $assessments_[9];
-
-
   $string = '
     [
   {
@@ -241,7 +253,7 @@ function convertFormatA()
       {
         "type": "image",
         "key": "Acount",
-        "value": "./images/ekareTitle.PNG"
+        "value":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
       },
       {
         "type": "key_value",
@@ -296,155 +308,28 @@ function convertFormatA()
       }
     ]
   },
-  {
-    "type": "section",
-    "left_text": "Patient Profile",
-    "right_text": "",
-    "columns": "2",
-    "values": [
-      {
-        "type": "key_value",
-        "key": "Name",
-        "value":"' . $someObject["last_name"] . ' ' . $someObject["first_name"] . '"
-      },
-      {
-        "type": "key_value",
-        "key": "MRN",
-        "value": "1"
-      },
-      {
-        "type": "key_value",
-        "key": "DOB",
-        "value":  "' . handleDate($someObject["dob"]) . '"
-      },
-      {
-        "type": "key_value",
-        "key": "Location",
-        "value": ""
-      },
+  ';
+  for ($i = 0; $i < sizeof($someObject["wounds"]); $i++) {
+    if ($someObject["wounds"][$i]["facility_acquired"] == null) $facility_acquired = "No";
+    else $facility_acquired = "Yes";
 
-      {
-        "type": "key_value",
-        "key": "Age/Sex",
-        "value":  "0/' . $someObject["gender"] . '"
-      },
-     
+    $lastMeasurement = $someObject["wounds"][$i]["measurements"][sizeof($someObject["wounds"][$i]["measurements"]) - 1];
+    $firstMeasurement = $someObject["wounds"][$i]["measurements"][0];
 
-      {
-        "type": "key_value",
-        "key": "Braden score",
-        "value": ""
-      },
+    $multipleWound = getMultiple($someObject["wounds"][0]["measurements"]);
 
-      {
-      
-      }
-    ]
-  },
+    //graph measurements
+    $arryaMeasure  = getMultiple($someObject["wounds"][$i]["measurements"]);
+    $date_assessment = "N/A";
+    if (isset($someObject["wounds"][$i]["assessments"])) {
+      $assessments = ($someObject["wounds"][$i]["assessments"][0]);
+      $assessments_ = getAssementsValue($someObject["wounds"][$i]["assessments"][0]["assessment_value"]);
+      $date = handleDateWithTime($assessments["created_at"]);
+      $generator_role = ucfirst(str_replace("_", "-", strtolower($assessments["generator_role"])));
+      $NoteAssessments = $generator_role . ' ' . $date  . ':<br/>' . $assessments_[9];
 
-    {
-    "type": "section",
-    "left_text": "Wound",
-    "right_text": "",
-    "columns": "2",
-    "values": [
-      {
-        "type": "key_value",
-        "key": "Etiology",
-        "value":"' . $someObject["wounds"][0]["type"] . '"
-      },
-      {
-        "type": "key_value",
-        "key": "Onset Date",
-        "value": "' . handleDate($someObject["wounds"][0]["onset"]) . '"
-      },
-      {
-        "type": "key_value",
-        "key": "Location",
-        "value": ""
-      },
-      {
-        "type": "key_value",
-        "key": "Assessment Date",
-        "value": "' . handleDateWithTime($assessments["created_at"]) . '"
-      },
-
-      {
-        "type": "key_value",
-        "key": "Status",
-        "value":"' . $someObject["wounds"][0]["status"] . '"
-      },
-      {
-        "type": "key_value",
-        "key": "Clinician",
-        "value": ""
-      },
-      {
-        "type": "key_value",
-        "key": "Facility acquired",
-        "value": "' . $facility_acquired . '"
-      }
-    ]
-  },
-
-  
- {
-    "type": "images",
-    "left_text": "Images",
-    "right_text": "' . handleDateWithTime($lastMeasurement["last_update_date"]) . '",
-    "columns": "2",
-    "values": [
-      {
-        "type": "key_value",
-        "key": "Initial",
-        "value": "' . handleDateWithTime($someObject["wounds"][0]["measurements"][0]["last_update_date"]) . '"
-      },
-      {
-        "type": "key_value",
-        "key": "Current",
-        "value":"' . handleDateWithTime($lastMeasurement["last_update_date"]) . '"
-      },
-
-      {
-        "type": "image",
-        "key": "",
-        "value": "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-        
-      },
-
-      {
-        "type": "image",
-        "key": "",
-        "value": "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-        {
-        "type": "key_value",
-        "key": "L x W x D",
-        "value": "' . $firstMeasurement["maximum_length"] . ' x ' . $firstMeasurement["maximum_width"] . ' x ' . $firstMeasurement["maximum_depth"] . ' cm³"
-      },
-      {},
-      {
-        "type": "key_value",
-        "key": "Area",
-        "value":"' . $firstMeasurement["area"] . ' cm²"
-      },
-      {},
-      {
-        "type": "key_value",
-        "key": "Volume",
-        "value": "' . $firstMeasurement["volume"] . ' cm³"
-      },
-      {},
-      {
-        "type": "key_value",
-        "key": "Type",
-        "value": "' . ucfirst($firstMeasurement["structure"]) . '"
-      }
-    
-    ]
-},
-
-   {
+      $assessments_json =
+        '{
     "type": "Assessments",
     "left_text": "Assessments",
     "right_text":"' . handleDateWithTime($assessments["created_at"]) . '",
@@ -536,83 +421,21 @@ function convertFormatA()
         "value": "' . $NoteAssessments . '"
       }
     ]
-  },
+  }';
+    } else {
 
-  
- {
-    "type": "images",
-    "left_text": "Images",
-    "right_text": "17/03/2021 04:41 PM",
-    "columns": "3",
-    "values": [
-      {
-        "type": "image",
-        "key": "22/12/2020",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
+      $assessments_json =
+        '{
+    "type": "Assessments",
+    "left_text": "Assessments",
+    "right_text":"",
+    "columns": "1",
+    "values":null
+  }';
+    }
 
-      {
-        "type": "image",
-        "key": "",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-      {
-        "type": "image",
-        "key": "22/12/2020",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 04:40 PM"
-      },
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 04:42 PM"
-      },
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 05:41 PM"
-      },
-      {
-        "type": "image",
-        "key": "22/12/2020",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-
-      {
-        "type": "image",
-        "key": "",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-      {
-        "type": "image",
-        "key": "22/12/2020",
-        "value":  "https://cdn.mos.cms.futurecdn.net/DRctYzDgEFEaqGCmangmEX-1200-80.jpg"
-      },
-
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 04:40 PM"
-      },
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 04:42 PM"
-      },
-      {
-        "type": "z",
-        "key": "22/12/2020",
-        "value": "7/03/2021 05:41 PM"
-      }
-    ]
-  }
-,
- {
+    $string .= '
+  {
     "type": "section",
     "left_text": "Patient Profile",
     "right_text": "",
@@ -620,55 +443,204 @@ function convertFormatA()
     "values": [
       {
         "type": "key_value",
-        "key": "Length",
-        "value": "Image Test"
+        "key": "Name",
+        "value":"' . $someObject["last_name"] . ' ' . $someObject["first_name"] . '"
       },
       {
         "type": "key_value",
-        "key": "Width",
+        "key": "MRN",
         "value": "1"
       },
       {
         "type": "key_value",
-        "key": "Avg Depth",
-        "value": "17/03/2021"
+        "key": "DOB",
+        "value":  "' . handleDate($someObject["dob"]) . '"
       },
       {
         "type": "key_value",
-        "key": "Max depth",
+        "key": "Location",
         "value": ""
       },
 
+      {
+        "type": "key_value",
+        "key": "Age/Sex",
+        "value":  "0/' . $someObject["gender"] . '"
+      },
+     
+
+      {
+        "type": "key_value",
+        "key": "Braden score",
+        "value": ""
+      },
+
+      {
+      
+      }
+    ]
+  },
+
+    {
+    "type": "section",
+    "left_text": "Wound",
+    "right_text": "",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Etiology",
+        "value":"' . $someObject["wounds"][$i]["type"] . '"
+      },
+      {
+        "type": "key_value",
+        "key": "Onset Date",
+        "value": "' . handleDate($someObject["wounds"][$i]["onset"]) . '"
+      },
+      {
+        "type": "key_value",
+        "key": "Location",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Assessment Date",
+        "value": "' . $date_assessment . '"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Status",
+        "value":"' . $someObject["wounds"][$i]["status"] . '"
+      },
+      {
+        "type": "key_value",
+        "key": "Clinician",
+        "value": ""
+      },
+      {
+        "type": "key_value",
+        "key": "Facility acquired",
+        "value": "' . $facility_acquired . '"
+      }
+    ]
+  },
+
+  
+ {
+    "type": "images",
+    "left_text": "Images",
+    "right_text": "' . handleDateWithTime($lastMeasurement["last_update_date"]) . '",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Initial",
+        "value": "' . handleDateWithTime($someObject["wounds"][$i]["measurements"][0]["last_update_date"]) . '"
+      },
+      {
+        "type": "key_value",
+        "key": "Current",
+        "value":"' . handleDateWithTime($lastMeasurement["last_update_date"])  . '"
+      },
+
+      {
+        "type": "image",
+        "key": "",
+        "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+        
+      },
+
+      {
+        "type": "image",
+        "key": "",
+        "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+      },
+        {
+        "type": "key_value",
+        "key": "L x W x D",
+        "value": "' . $firstMeasurement["maximum_length"] . ' x ' . $firstMeasurement["maximum_width"] . ' x ' . $firstMeasurement["maximum_depth"] . ' cm³"
+      },
+      {},
       {
         "type": "key_value",
         "key": "Area",
-        "value": "0/M"
+        "value":"' . $firstMeasurement["area"] . ' cm²"
       },
-      { "type": "key_value", 
-        "key": "Volume", 
-        "value": "" },
+      {},
       {
         "type": "key_value",
-        "key": "Red",
-        "value": ""
-      },
-
-      {
-        "type": "key_value",
-        "key": "Yellow",
-        "value": "Hamza"
-      },
-
-      {
-        "type": "key_value",
-        "key": "Black",
-        "value": "Wound test"
+        "key": "Volume",
+        "value": "' . $firstMeasurement["volume"] . ' cm³"
       },
       {},
       {
         "type": "key_value",
         "key": "Type",
-        "value": ""
+        "value": "' . ucfirst($firstMeasurement["structure"]) . '"
+      }
+    
+    ]
+},' .
+      $assessments_json . ',
+ {
+    "type": "section",
+    "left_text": "Measurement",
+    "right_text": "' . handleDateWithTime($lastMeasurement["last_update_date"]) . '",
+    "columns": "2",
+    "values": [
+      {
+        "type": "key_value",
+        "key": "Length",
+        "value": "' . $arryaMeasure["classifyMultiple"]["maximum_length"] . '"
+      },
+      {
+        "type": "key_value",
+        "key": "Width",
+        "value": "' . $arryaMeasure["classifyMultiple"]["maximum_width"] . ' cm"
+      },
+      {
+        "type": "key_value",
+        "key": "Avg Depth",
+        "value": "' . $arryaMeasure["classifyMultiple"]["avg_depth"] . ' cm"
+      },
+      {
+        "type": "key_value",
+        "key": "Max depth",
+        "value": "' . $arryaMeasure["classifyMultiple"]["maximum_depth"] . ' cm"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Area",
+        "value": "' . $arryaMeasure["classifyMultiple"]["area"] . ' cm³"
+      },
+      { "type": "key_value", 
+        "key": "Volume", 
+        "value": "' . $arryaMeasure["classifyMultiple"]["volume"] . ' cm²"
+      },
+      {
+        "type": "key_value",
+        "key": "Red",
+        "value": "' . $arryaMeasure["classifyMultiple"]["granulation"] . ' %"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Yellow",
+        "value":"' . $arryaMeasure["classifyMultiple"]["slough"] . ' %"
+      },
+
+      {
+        "type": "key_value",
+        "key": "Black",
+        "value": "' . $arryaMeasure["classifyMultiple"]["eschar"] . ' %"
+      },
+      {},
+      {
+        "type": "key_value",
+        "key": "Type",
+        "value":  "' . $arryaMeasure["classifyMultiple"]["structure"] . '"
       },
          {},
       {
@@ -687,8 +659,8 @@ function convertFormatA()
 },
   {
     "type": "graph",
-    "left_text": "Images",
-    "right_text": "17/03/2021 04:41 PM",
+    "left_text": "graph_measurement",
+    "right_text": "",
     "columns": "2",
     "values": [
       
@@ -743,22 +715,19 @@ function convertFormatA()
         "type": "graph_area",
         "key": "",
 
-        "granulation": 77,
-        "slough": 16,
-        "eschar": 7,
+        "granulation":"' . $arryaMeasure["classifyMultiple"]["granulation"] . '",
+        "slough": "' . $arryaMeasure["classifyMultiple"]["slough"] . '",
+        "eschar":"' . $arryaMeasure["classifyMultiple"]["eschar"] . '",
         "colorTop": "247377",
         "color": "6495ED"
       }
      
     ]
   }
- 
-
-  
- 
-
-
-]';
+';
+    if ($i != sizeof($someObject["wounds"]) - 1) $string .= ',';
+  }
+  $string .= ']';
   return $string;
 }
 
@@ -766,4 +735,77 @@ function first()
 { //function parameters, two variables.
   return "string";  //returns the second argument passed into the function
 }
-https://www.bitdegree.org/learn/best-code-editor/php-array-push-example-2
+// https://www.bitdegree.org/learn/best-code-editor/php-array-push-example-2
+
+//   {
+//     "type": "images_appendix",
+//     "left_text": "Images",
+//     "right_text": "17/03/2021 04:41 PM",
+//     "columns": "3",
+//     "values": [
+//       {
+//         "type": "image",
+//         "key": "22/12/2020",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+
+//       {
+//         "type": "image",
+//         "key": "",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+//       {
+//         "type": "image",
+//         "key": "22/12/2020",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 04:40 PM"
+//       },
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 04:42 PM"
+//       },
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 05:41 PM"
+//       },
+//       {
+//         "type": "image",
+//         "key": "22/12/2020",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+
+//       {
+//         "type": "image",
+//         "key": "",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+//       {
+//         "type": "image",
+//         "key": "22/12/2020",
+//         "value":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cr6c1Jn8CNDY3MpTsd9X0HZHHPVQ0DOQUA&usqp=CAU"
+//       },
+
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 04:40 PM"
+//       },
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 04:42 PM"
+//       },
+//       {
+//         "type": "z",
+//         "key": "22/12/2020",
+//         "value": "7/03/2021 05:41 PM"
+//       }
+//     ]
+//   }
